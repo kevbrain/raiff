@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: raiff-dev-eventlistener
+  namespace: raiff-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: raiff-dev-trigger

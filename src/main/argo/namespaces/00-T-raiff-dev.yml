@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: raiff-dev-trigger
+  namespace: raiff-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: raiff-dev-triggerbinding
+  template:
+    ref: raiff-dev-triggertemplate
